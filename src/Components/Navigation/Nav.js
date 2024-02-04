@@ -18,7 +18,7 @@ const Nav = () => {
 
   return (
     <div className=''>
-      <div className='flex justify-around items-center p-5 max-md:justify-items-end'>
+      <div className='flex justify-around items-center p-5 max-md:justify-items-end bg-sky-50'>
         <div className='text-2xl font-bold text-sky-600 '>
             <h1>Santosh</h1>
         </div>
