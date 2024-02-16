@@ -3,13 +3,18 @@ import { IoMoonOutline } from "react-icons/io5";
 import { CiLight } from "react-icons/ci";
 import { CgMenuGridR } from "react-icons/cg";
 import { RxCross1 } from "react-icons/rx";
+import { Outlet } from "react-router-dom";
+import DarkMode from "../DarkMode/DarkMode";
+import LightMode from "../DarkMode/LightMode";
 
 const Nav = () => {
   const [nightMode, setNightMode] = useState(false);
+  const [theme, setTheme] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   // Night Mode
   const nightModeHand = () => {
     setNightMode((prevMode) => !prevMode);
+    setTheme === theme ? <DarkMode /> : <LightMode />;
   };
 
   //    ToggleMenu
@@ -71,6 +76,7 @@ const Nav = () => {
         </div>
       </div>
       <hr />
+      <Outlet />
     </div>
   );
 };
